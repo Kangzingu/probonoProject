@@ -9,6 +9,12 @@ EditorBuildSettings:
     path: Assets/Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 1
-    path: Assets/Scenes/BeforeMerge.unity
+    path: Assets/Scenes/Stage1.unity
     guid: 100fd7aac72040d488b66fffa83ec2f2
+  - enabled: 1
+    path: Assets/Scenes/introScene.unity
+    guid: 001d11e2aed950f47a9f11bc9321dda0
+  - enabled: 1
+    path: Assets/Scenes/SecondScene.unity
+    guid: b4e6b49a51a705b4c8696c8e350a6ca6
   m_configObjects: {}
