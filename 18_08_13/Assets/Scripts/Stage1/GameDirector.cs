@@ -146,7 +146,7 @@ public class GameDirector : MonoBehaviour {
     }
     public void MotorCycleStart()
     {
-        mMotorCycle.transform.position = new Vector3(16, 0, -15);
+        mMotorCycle.transform.position = new Vector3(18, 0, -15);
         isMotorCycleStart = true;
     }
     public void CarStart()
