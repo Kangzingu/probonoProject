@@ -9,17 +9,19 @@ public class BCarMove : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        Car = GameObject.Find("Car");
+        Car = GameObject.Find("CarD");
         state = 0;
-	}
+     
+    }
 	
 	// Update is called once per frame
 	void Update () {
-
+   
         switch (state)
         {
             case 0:
-                Car.transform.Translate(0, 0, 1.0f); 
+//                Car.transform.Translate(0, 0, 1.0f); 
+            
                 break;
             case 1:
                 

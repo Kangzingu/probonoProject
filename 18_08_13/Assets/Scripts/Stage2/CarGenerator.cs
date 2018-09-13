@@ -4,19 +4,20 @@ using UnityEngine;
 
 public class CarGenerator : MonoBehaviour {
     public GameObject CarPrefab;
-    float delta;
+    float delta=0;
+    float span = 1.0f;
 
 	// Use this for initialization
 	void Start () {
-        delta = 0;
 	}
 	
 	// Update is called once per frame
 	void Update () {
         this.delta += Time.deltaTime;
 
-        if (delta % 60 == 0)
+        if (delta > span)
         {
+            delta = 0;
             GameObject car;
             car = Instantiate(CarPrefab) as GameObject;
 
@@ -62,7 +63,8 @@ public class CarGenerator : MonoBehaviour {
                     z = 0;
                     break;
             }
-            car.transform.position = new Vector3(x, 0, z);
+            car.transform.position = new Vector3(-15, -1, 1);
+            car.GetComponent<Rigidbody>().AddForce(new Vector3(5000, 0, 0));
         }
     }
 }
