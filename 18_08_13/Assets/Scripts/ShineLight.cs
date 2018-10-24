@@ -21,7 +21,7 @@ public class ShineLight : MonoBehaviour {
             RaycastHit hit;
             if (Physics.Raycast(ray, out hit))
             {
-                diff = (player.transform.position - hit.point) / 10;
+                diff = (mainCamera.transform.position - hit.point) / 10;
                 if (Vector3.Distance(new Vector3(0, 0, 0), diff) < 0.55f)
                     mLight.transform.position = hit.point + diff;
             }
