@@ -69,9 +69,10 @@ public class GameDirector : MonoBehaviour {
         }
         if (isChildStart == true)//애기 뛰는거 시작
         {
-            mChild.transform.Translate(0.1f, 0, 0);
+            //mChild.transform.Translate(0.1f, 0, 0);
             //mChild.GetComponent<Rigidbody>().AddForce(10,0,0);
             //isChildStart = false;
+            mChild.GetComponent<Animator>().SetFloat("h", 1.0f);
         }
         if (isMotorCycleStart == true)//오토바이 출발
         {
@@ -142,6 +143,7 @@ public class GameDirector : MonoBehaviour {
     }
     public void ChildRun()
     {
+        mChild.GetComponent<Animator>().SetBool("isChildStart", true);
         isChildStart = true;//애기 뛰게 하자
     }
     public void MotorCycleStart()
@@ -170,6 +172,7 @@ public class GameDirector : MonoBehaviour {
     public void CollsionChild()
     {
         Debug.Log("아이 닿음");
+        mChild.GetComponent<Animator>().SetFloat("h", 0.0f);
         isChildStart = false;
     }
     public void CollisionMotorCycle()
