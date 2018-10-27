@@ -2,17 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CarGenerator : MonoBehaviour {
+public class CarGenerator : MonoBehaviour
+{
     public GameObject CarPrefab;
-    float delta=0;
+    float delta = 0;
     float span = 1.0f;
 
-	// Use this for initialization
-	void Start () {
-	}
-	
-	// Update is called once per frame
-	void Update () {
+    // Use this for initialization
+    void Start()
+    {
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
         this.delta += Time.deltaTime;
 
         if (delta > span)
@@ -63,8 +66,8 @@ public class CarGenerator : MonoBehaviour {
                     z = 0;
                     break;
             }
-            car.transform.position = new Vector3(-15, -1, 1);
-            car.GetComponent<Rigidbody>().AddForce(new Vector3(5000, 0, 0));
+            car.transform.position = new Vector3(-80, -1, 1);
+            //           car.GetComponent<Rigidbody>().AddForce(new Vector3(5000, 0, 0));
         }
     }
 }
