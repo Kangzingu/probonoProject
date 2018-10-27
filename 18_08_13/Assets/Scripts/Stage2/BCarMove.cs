@@ -5,7 +5,6 @@ using UnityEngine;
 public class BCarMove : MonoBehaviour
 {
 
-    GameObject[] Cars;
     int state;
 
     // Use this for initialization
@@ -19,7 +18,7 @@ public class BCarMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Cars = GameObject.FindGameObjectsWithTag("BCar");
+        GameObject[] Cars = GameObject.FindGameObjectsWithTag("BCar");
         switch (state)
         {
             case 0:

@@ -4550,6 +4550,16 @@ Prefab:
       propertyPath: m_RootOrder
       value: 18
       objectReference: {fileID: 0}
+    - target: {fileID: 54083823102561440, guid: 1a0dbf1739cb66d4eadb8100ee675912,
+        type: 2}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 54083823102561440, guid: 1a0dbf1739cb66d4eadb8100ee675912,
+        type: 2}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1a0dbf1739cb66d4eadb8100ee675912, type: 2}
   m_IsPrefabAsset: 0
@@ -6846,7 +6856,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4044162276060404, guid: 3d41c7a5c70c46e40ac9f7f29e531492, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -0.9
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 4044162276060404, guid: 3d41c7a5c70c46e40ac9f7f29e531492, type: 2}
       propertyPath: m_LocalPosition.z
@@ -6887,6 +6897,10 @@ Prefab:
     - target: {fileID: 1947989349852754, guid: 3d41c7a5c70c46e40ac9f7f29e531492, type: 2}
       propertyPath: m_Name
       value: CrossWalk (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4044162276060404, guid: 3d41c7a5c70c46e40ac9f7f29e531492, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3d41c7a5c70c46e40ac9f7f29e531492, type: 2}
@@ -7031,6 +7045,10 @@ Prefab:
     - target: {fileID: 4044162276060404, guid: 3d41c7a5c70c46e40ac9f7f29e531492, type: 2}
       propertyPath: m_LocalScale.z
       value: 1.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4044162276060404, guid: 3d41c7a5c70c46e40ac9f7f29e531492, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 0.1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3d41c7a5c70c46e40ac9f7f29e531492, type: 2}

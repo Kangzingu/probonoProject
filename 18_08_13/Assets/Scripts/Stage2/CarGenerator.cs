@@ -66,7 +66,7 @@ public class CarGenerator : MonoBehaviour
                     z = 0;
                     break;
             }
-            car.transform.position = new Vector3(-80, -1, 1);
+            car.transform.position = new Vector3(-60, -1, 1);
             //           car.GetComponent<Rigidbody>().AddForce(new Vector3(5000, 0, 0));
         }
     }

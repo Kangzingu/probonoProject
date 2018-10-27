@@ -14,6 +14,7 @@ TagManager:
   - MChild
   - MStudents
   - MLight
+  - BCar
   layers:
   - Default
   - TransparentFX
