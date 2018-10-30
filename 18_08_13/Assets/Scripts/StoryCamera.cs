@@ -1,9 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement; //화면 변환시 사용
 
-public class GoStage1 : MonoBehaviour {
+public class StoryCamera : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
@@ -11,8 +10,7 @@ public class GoStage1 : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	public void LoadStage1()
-    {
-        SceneManager.LoadScene("Story1");
+	void Update () {
+        transform.position += new Vector3(0,-0.1f,0);
     }
 }

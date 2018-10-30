@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement; //화면 변환시 사용
 
-public class GoStage2 : MonoBehaviour {
+public class StartStage2 : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
@@ -11,8 +11,11 @@ public class GoStage2 : MonoBehaviour {
 	}
 
     // Update is called once per frame
-    public void LoadStage2()
+    void Update()
     {
-        SceneManager.LoadScene("Story2");
+        if (Input.GetMouseButtonDown(0))
+        {
+            SceneManager.LoadScene("Stage2");
+        }
     }
 }

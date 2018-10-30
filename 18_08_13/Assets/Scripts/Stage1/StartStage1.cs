@@ -3,16 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement; //화면 변환시 사용
 
-public class GoStage2 : MonoBehaviour {
+public class StartStage1 : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
 		
 	}
-
-    // Update is called once per frame
-    public void LoadStage2()
-    {
-        SceneManager.LoadScene("Story2");
+	
+	// Update is called once per frame
+	void Update () {
+        if (Input.GetMouseButtonDown(0))
+        {
+            SceneManager.LoadScene("Stage1");
+        }
     }
 }

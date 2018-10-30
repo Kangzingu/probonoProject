@@ -185,6 +185,7 @@ GameObject:
   - component: {fileID: 276259284}
   - component: {fileID: 276259283}
   - component: {fileID: 276259282}
+  - component: {fileID: 276259285}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -252,6 +253,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &276259285
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 276259281}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31e60c682b8eeb94daeb0421a783fc56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &614121207
 GameObject:
   m_ObjectHideFlags: 0
@@ -517,7 +529,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 160, y: 30}
+  m_SizeDelta: {x: 240, y: 140}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1235441450
 MonoBehaviour:
@@ -551,7 +563,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: "\uC52C 1\n"
 --- !u!114 &1235441451
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -563,17 +575,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5be29cce2a023d4c9715f993cd1ffe2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 0.2
+  delay: 0.07
   Skip_delay: 1
   cnt: 0
   fulltext:
-  - "\uD587\uBE5B\uC774 \uB530\uC0AC\uB85C\uC6B4 \uD654\uCC3D\uD55C \uC5B4\uB290 \uD558\uB8E8\uC600\uC2B5\uB2C8\uB2E4.
-    \ \uD3C9\uC18C \uB2F9\uC2E0\uC758 \uC678\uCD9C\uC5D0 \uB3D9\uD589\uD558\uC2DC\uB358
-    \uC5B4\uBA38\uB2C8\uAED8\uC11C\uB294 \uC5B4\uC82F\uBC24\uBD80\uD130 \uC7A6\uC740
-    \uAE30\uCE68\uC744 \uD558\uC168\uC9C0\uB9CC, \uAD1C\uCC2E\uB2E4\uACE0 \uB9D0\uC500\uD558\uC168\uC2B5\uB2C8\uB2E4.
-    \  \uD558\uC9C0\uB9CC \uB2F9\uC2E0\uC740 \uADF8\uB7F0 \uC5B4\uBA38\uB2C8\uAC00
-    \uC2EC\uD788 \uAC71\uC815\uB418\uC5C8\uACE0, \uBAB0\uB798 \uC57D\uC744 \uC0AC\uB7EC
-    \uB098\uAC00\uAE30\uB85C \uACB0\uC815\uD558\uC600\uC2B5\uB2C8\uB2E4. \u2026.(\uC911\uB7B5) "
+  - "   \uD587\uBE5B\uC774 \uB530\uC0AC\uB85C\uC6B4 \uD654\uCC3D\uD55C \uC5B4\uB290
+    \uD558\uB8E8\uC600\uC2B5\uB2C8\uB2E4.   \uD3C9\uC18C \uB2F9\uC2E0\uC758 \uC678\uCD9C\uC5D0
+    \uB3D9\uD589\uD558\uC2DC\uB358 \uC5B4\uBA38\uB2C8\uAED8\uC11C\uB294 \uC5B4\uC82F\uBC24\uBD80\uD130
+    \uC7A6\uC740 \uAE30\uCE68\uC744 \uD558\uC168\uC9C0\uB9CC, \uAD1C\uCC2E\uB2E4\uACE0
+    \uB9D0\uC500\uD558\uC168\uC2B5\uB2C8\uB2E4.   \uD558\uC9C0\uB9CC \uB2F9\uC2E0\uC740
+    \uADF8\uB7F0 \uC5B4\uBA38\uB2C8\uAC00 \uC2EC\uD788 \uAC71\uC815\uB418\uC5C8\uACE0,
+    \uBAB0\uB798 \uC57D\uC744 \uC0AC\uB7EC \uB098\uAC00\uAE30\uB85C \uACB0\uC815\uD558\uC600\uC2B5\uB2C8\uB2E4."
   dialog_cnt: 1
   text_exit: 0
   text_full: 0
@@ -585,6 +597,46 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1235441448}
   m_CullTransparentMesh: 0
+--- !u!1 &1401170965
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1401170966}
+  - component: {fileID: 1401170967}
+  m_Layer: 0
+  m_Name: SceneManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1401170966
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1401170965}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 143.25647, y: 201.03792, z: 182.12242}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1401170967
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1401170965}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 937b1ef7e7f68be449ff1d99da1dea6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1709732355
 GameObject:
   m_ObjectHideFlags: 0
@@ -619,7 +671,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 319, y: 0}
+  m_AnchoredPosition: {x: 304, y: 0}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1709732357
