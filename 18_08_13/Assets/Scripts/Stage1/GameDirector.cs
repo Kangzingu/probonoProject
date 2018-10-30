@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameDirector : MonoBehaviour {
+public class GameDirector : MonoBehaviour
+{
     // Use this for initialization
 
     public GameObject door;
@@ -26,23 +27,34 @@ public class GameDirector : MonoBehaviour {
 
     public GameObject mPlayer;
 
-    void Start () {
+    //Audio
+    public AudioClip childLaugh;
+    public AudioClip autoBike;
+    AudioSource aud;
+
+    void Start()
+    {
         isOpened = false;
         isDoorStart = false;
         rotateCount = 0;
-        turnValue= 90.0f;
+        turnValue = 90.0f;
         //door 제어
 
         isChildStart = false;
         isCarStart = false;
         isPeoplesStart = false;
         isPeopleTurnStart = false;
-        
+
+        //Audio
+        this.aud = GetComponent<AudioSource>();
+
     }
     // Update is called once per frame
-    void Update () {
+    void Update()
+    {
         if (isDoorStart == true)//문 열기 시작
         {
+
             Debug.Log(rotateCount);
             if (rotateCount > 30)//90도 이상 열렸다면
             {
@@ -59,11 +71,12 @@ public class GameDirector : MonoBehaviour {
 
             if (isOpened == true)//만약 다 열렸다면
             {
+                this.aud.PlayOneShot(this.childLaugh);
                 this.ChildRun();
                 //애기 뛰어라
             }
 
-        
+
 
 
         }
@@ -76,6 +89,7 @@ public class GameDirector : MonoBehaviour {
         }
         if (isMotorCycleStart == true)//오토바이 출발
         {
+            this.aud.PlayOneShot(this.autoBike);
             mMotorCycle.transform.Translate(0, 0, 0.1f);
         }
         if (isCarStart == true)//차 출발
@@ -84,20 +98,21 @@ public class GameDirector : MonoBehaviour {
         }
         if (isPeoplesStart == true)//아이 출발
         {
-            mPeople.transform.Translate(-0.015f,0,0);
+            mPeople.transform.Translate(-0.015f, 0, 0);
         }
         if (isPeopleTurnStart == true)//학생들이 한번만 돈다
         {
             turnValue += -0.5f;
             mPeople.transform.Rotate(0, -0.5f, 0);
             //한번만 돌게 한다.
-            if (turnValue < 0) {
+            if (turnValue < 0)
+            {
                 isPeopleTurnStart = false;
             }
-            
+
         }
-        
-	}
+
+    }
     public void Stage1Clear()
     {
         Debug.Log("Stage1Clear");
@@ -120,7 +135,7 @@ public class GameDirector : MonoBehaviour {
         Debug.Log("Stage4Clear");
         //this.CarStart();
         //차가 앞에서 출발함
-        
+
     }
     public void Stage5Clear()
     {
@@ -136,7 +151,7 @@ public class GameDirector : MonoBehaviour {
     public void TrashCollide()
     {
         Debug.Log("TrashCollide");
-    }                                 
+    }
     public void DoorRotate()
     {
         isDoorStart = true;//문 열자
