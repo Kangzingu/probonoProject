@@ -1818,7 +1818,7 @@ GameObject:
   - component: {fileID: 224730336}
   m_Layer: 0
   m_Name: Ban (5)
->>>>>>> newBranch
+
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1831,7 +1831,7 @@ MeshCollider:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 224730335}
->>>>>>> newBranch
+
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
@@ -1848,7 +1848,7 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 224730335}
   m_Enabled: 0
->>>>>>> newBranch
+
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -1859,7 +1859,7 @@ MeshRenderer:
   m_Materials:
 
   - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
->>>>>>> newBranch
+
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1900,7 +1900,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 90}
->>>>>>> newBranch
+
 --- !u!1 &238995236
 GameObject:
   m_ObjectHideFlags: 0
@@ -5204,7 +5204,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
->>>>>>> newBranch
+
 --- !u!1001 &680441408
 Prefab:
   m_ObjectHideFlags: 0
