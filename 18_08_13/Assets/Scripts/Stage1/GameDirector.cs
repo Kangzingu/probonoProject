@@ -80,7 +80,7 @@ public class GameDirector : MonoBehaviour {
         }
         if (isCarStart == true)//차 출발
         {
-            mCar.transform.Translate(0, 0, 0.25f);
+            //mCar.transform.Translate(0, 0, 0.25f);
         }
         if (isPeoplesStart == true)//아이 출발
         {
@@ -118,7 +118,7 @@ public class GameDirector : MonoBehaviour {
     public void Stage4Clear()
     {
         Debug.Log("Stage4Clear");
-        this.CarStart();
+        //this.CarStart();
         //차가 앞에서 출발함
         
     }
