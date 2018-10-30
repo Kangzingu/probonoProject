@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GameDirector : MonoBehaviour {
     // Use this for initialization
-    public Light m_light1, m_light2;
+    public Light m_light1, m_light2, m_light3, m_light4;
 
     public GameObject door;
     bool isDoorStart;
@@ -28,6 +28,8 @@ public class GameDirector : MonoBehaviour {
     public GameObject mPlayer;
 
     bool isLightOn;
+
+    float count = 1.0f;
     void Start () {
         isOpened = false;
         isDoorStart = false;
@@ -101,9 +103,27 @@ public class GameDirector : MonoBehaviour {
 
         if (isLightOn == true)
         {
-            Debug.Log("m_light1_on");
-            m_light1.enabled = true;
-            m_light2.enabled = true;
+            //   Debug.Log("m_light1_on");
+            if (count>30.0f)
+            {
+                m_light1.enabled = false;
+                m_light2.enabled = false;
+                m_light3.enabled = false;
+                m_light4.enabled = false;
+
+                isLightOn = false;
+                count = 0;
+            }
+            else
+            {
+                count =count * Time.deltaTime;
+                m_light1.enabled = true;
+                m_light2.enabled = true;
+                m_light3.enabled = true;
+                m_light4.enabled = true;
+                Debug.Log(count);
+            }
+           
         }
 
 
