@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MoveLift : MonoBehaviour {
+public class MoveLift : MonoBehaviour
+{
     public GameObject liftAxis;
     public GameObject step;
     public GameObject lift;
@@ -13,27 +14,34 @@ public class MoveLift : MonoBehaviour {
 
     float speed;
 
+    bool isKeyDowned;
+
     bool rotLift;
     bool operateStep;
     bool transLift;
     bool playerOn;
+
     // Use this for initialization
-	void Start () {
+    void Start()
+    {
         rotLift = false;
         operateStep = false;
         transLift = false;
         playerOn = false;
+        isKeyDowned = false;
 
         count = 0;
         speed = 1.0f;
         countMax = (int)(90 / speed);
-	}
+    }
 
     // Update is called once per frame
-    void Update() {
-        if (Input.GetKeyDown(KeyCode.Space))
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space) && isKeyDowned == false)
         {
             rotLift = true;
+            isKeyDowned = true;
         }
         if (rotLift == true)
         {
@@ -68,7 +76,7 @@ public class MoveLift : MonoBehaviour {
     {
         if (count < countMax)
         {
-            step.transform.position+=(new Vector3(speed, 0, 0));
+            step.transform.position += (new Vector3(speed, 0, 0));
             count++;
         }
         if (count == countMax)
