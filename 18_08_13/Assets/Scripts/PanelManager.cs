@@ -29,8 +29,8 @@ public class PanelManager : MonoBehaviour {
 	{
 		if (m_Open == anim)
 			return;
-
-		anim.gameObject.SetActive(true);
+   
+        anim.gameObject.SetActive(true);
 		var newPreviouslySelected = EventSystem.current.currentSelectedGameObject;
 
 		anim.transform.SetAsLastSibling();
@@ -38,18 +38,20 @@ public class PanelManager : MonoBehaviour {
 		CloseCurrent();
 
 		m_PreviouslySelected = newPreviouslySelected;
-
 		m_Open = anim;
+ 
 		m_Open.SetBool(m_OpenParameterId, true);
-
+  
 		GameObject go = FindFirstEnabledSelectable(anim.gameObject);
 
 		SetSelected(go);
-	}
+
+  
+    }
 
 	static GameObject FindFirstEnabledSelectable (GameObject gameObject)
 	{
-		GameObject go = null;
+        GameObject go = null;
 		var selectables = gameObject.GetComponentsInChildren<Selectable> (true);
 		foreach (var selectable in selectables) {
 			if (selectable.IsActive () && selectable.IsInteractable ()) {
@@ -57,7 +59,7 @@ public class PanelManager : MonoBehaviour {
 				break;
 			}
 		}
-		return go;
+        return go;
 	}
 
 	public void CloseCurrent()
@@ -69,7 +71,7 @@ public class PanelManager : MonoBehaviour {
 		SetSelected(m_PreviouslySelected);
 		StartCoroutine(DisablePanelDeleyed(m_Open));
 		m_Open = null;
-	}
+    }
 
 	IEnumerator DisablePanelDeleyed(Animator anim)
 	{
@@ -87,10 +89,10 @@ public class PanelManager : MonoBehaviour {
 
 		if (wantToClose)
 			anim.gameObject.SetActive(false);
-	}
+    }
 
 	private void SetSelected(GameObject go)
 	{
-		EventSystem.current.SetSelectedGameObject(go);
-	}
+        EventSystem.current.SetSelectedGameObject(go);
+    }
 }
