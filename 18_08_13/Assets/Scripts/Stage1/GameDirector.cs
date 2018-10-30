@@ -49,9 +49,11 @@ public class GameDirector : MonoBehaviour
         isPeopleTurnStart = false;
 
 
+        //가로등 불 제어
+        isLightOn = false;
+
         //Audio
         this.aud = GetComponent<AudioSource>();
-
 
     }
     // Update is called once per frame
@@ -80,7 +82,6 @@ public class GameDirector : MonoBehaviour
                 this.ChildRun();
                 //애기 뛰어라
             }
-
         }
         if (isChildStart == true)//애기 뛰는거 시작
         {
@@ -113,6 +114,34 @@ public class GameDirector : MonoBehaviour
             }
 
         }
+
+
+        if (isLightOn == true)
+        {
+            //   Debug.Log("m_light1_on");
+            if (count>30.0f)
+            {
+                m_light1.enabled = false;
+                m_light2.enabled = false;
+                m_light3.enabled = false;
+                m_light4.enabled = false;
+
+                isLightOn = false;
+                count = 0;
+            }
+            else
+            {
+                count =count * Time.deltaTime;
+                m_light1.enabled = true;
+                m_light2.enabled = true;
+                m_light3.enabled = true;
+                m_light4.enabled = true;
+                Debug.Log(count);
+            }
+           
+        }
+
+
 
     }
     public void Stage1Clear()
