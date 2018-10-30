@@ -1930,6 +1930,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+<<<<<<< HEAD
 --- !u!33 &235594835
 MeshFilter:
   m_ObjectHideFlags: 0
