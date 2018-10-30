@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GameDirector : MonoBehaviour {
     // Use this for initialization
+    public Light m_light1, m_light2;
 
     public GameObject door;
     bool isDoorStart;
@@ -26,6 +27,7 @@ public class GameDirector : MonoBehaviour {
 
     public GameObject mPlayer;
 
+    bool isLightOn;
     void Start () {
         isOpened = false;
         isDoorStart = false;
@@ -37,7 +39,10 @@ public class GameDirector : MonoBehaviour {
         isCarStart = false;
         isPeoplesStart = false;
         isPeopleTurnStart = false;
-        
+
+        //가로등 불 제어
+        isLightOn = false;
+
     }
     // Update is called once per frame
     void Update () {
@@ -62,9 +67,6 @@ public class GameDirector : MonoBehaviour {
                 this.ChildRun();
                 //애기 뛰어라
             }
-
-        
-
 
         }
         if (isChildStart == true)//애기 뛰는거 시작
@@ -96,11 +98,20 @@ public class GameDirector : MonoBehaviour {
             }
             
         }
-        
-	}
+
+        if (isLightOn == true)
+        {
+            Debug.Log("m_light1_on");
+            m_light1.enabled = true;
+            m_light2.enabled = true;
+        }
+
+
+    }
     public void Stage1Clear()
     {
         Debug.Log("Stage1Clear");
+        isLightOn = true;
     }
     public void Stage2Clear()
     {
