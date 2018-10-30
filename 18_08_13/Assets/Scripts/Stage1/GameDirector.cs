@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameDirector : MonoBehaviour {
+public class GameDirector : MonoBehaviour
+{
     // Use this for initialization
     public Light m_light1, m_light2, m_light3, m_light4;
 
@@ -27,14 +28,19 @@ public class GameDirector : MonoBehaviour {
 
     public GameObject mPlayer;
 
-    bool isLightOn;
 
-    float count = 1.0f;
-    void Start () {
+    //Audio
+    public AudioClip childLaugh;
+    public AudioClip autoBike;
+    AudioSource aud;
+
+    void Start()
+    {
+
         isOpened = false;
         isDoorStart = false;
         rotateCount = 0;
-        turnValue= 90.0f;
+        turnValue = 90.0f;
         //door 제어
 
         isChildStart = false;
@@ -42,7 +48,6 @@ public class GameDirector : MonoBehaviour {
         isPeoplesStart = false;
         isPeopleTurnStart = false;
 
-<<<<<<< HEAD
 
         //가로등 불 제어
         isLightOn = false;
@@ -50,16 +55,13 @@ public class GameDirector : MonoBehaviour {
         //Audio
         this.aud = GetComponent<AudioSource>();
 
-=======
-        //가로등 불 제어
-        isLightOn = false;
-
->>>>>>> parent of f1d36f9... Merge branch 'master' of https://github.com/Kangzingu/probonoProject
     }
     // Update is called once per frame
-    void Update () {
+    void Update()
+    {
         if (isDoorStart == true)//문 열기 시작
         {
+
             Debug.Log(rotateCount);
             if (rotateCount > 30)//90도 이상 열렸다면
             {
@@ -76,6 +78,7 @@ public class GameDirector : MonoBehaviour {
 
             if (isOpened == true)//만약 다 열렸다면
             {
+                this.aud.PlayOneShot(this.childLaugh);
                 this.ChildRun();
                 //애기 뛰어라
             }
@@ -89,6 +92,7 @@ public class GameDirector : MonoBehaviour {
         }
         if (isMotorCycleStart == true)//오토바이 출발
         {
+            this.aud.PlayOneShot(this.autoBike);
             mMotorCycle.transform.Translate(0, 0, 0.1f);
         }
         if (isCarStart == true)//차 출발
@@ -97,18 +101,20 @@ public class GameDirector : MonoBehaviour {
         }
         if (isPeoplesStart == true)//아이 출발
         {
-            mPeople.transform.Translate(-0.015f,0,0);
+            mPeople.transform.Translate(-0.015f, 0, 0);
         }
         if (isPeopleTurnStart == true)//학생들이 한번만 돈다
         {
             turnValue += -0.5f;
             mPeople.transform.Rotate(0, -0.5f, 0);
             //한번만 돌게 한다.
-            if (turnValue < 0) {
+            if (turnValue < 0)
+            {
                 isPeopleTurnStart = false;
             }
-            
+
         }
+
 
         if (isLightOn == true)
         {
@@ -136,36 +142,7 @@ public class GameDirector : MonoBehaviour {
         }
 
 
-<<<<<<< HEAD
-        if (isLightOn == true)
-        {
-            //   Debug.Log("m_light1_on");
-            if (count>30.0f)
-            {
-                m_light1.enabled = false;
-                m_light2.enabled = false;
-                m_light3.enabled = false;
-                m_light4.enabled = false;
 
-                isLightOn = false;
-                count = 0;
-            }
-            else
-            {
-                count =count * Time.deltaTime;
-                m_light1.enabled = true;
-                m_light2.enabled = true;
-                m_light3.enabled = true;
-                m_light4.enabled = true;
-                Debug.Log(count);
-            }
-           
-        }
-
-
-
-=======
->>>>>>> parent of f1d36f9... Merge branch 'master' of https://github.com/Kangzingu/probonoProject
     }
     public void Stage1Clear()
     {
@@ -190,7 +167,7 @@ public class GameDirector : MonoBehaviour {
         Debug.Log("Stage4Clear");
         //this.CarStart();
         //차가 앞에서 출발함
-        
+
     }
     public void Stage5Clear()
     {
@@ -206,7 +183,7 @@ public class GameDirector : MonoBehaviour {
     public void TrashCollide()
     {
         Debug.Log("TrashCollide");
-    }                                 
+    }
     public void DoorRotate()
     {
         isDoorStart = true;//문 열자
